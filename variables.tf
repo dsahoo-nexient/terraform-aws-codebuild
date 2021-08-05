@@ -80,6 +80,12 @@ variable "privileged_mode" {
   description = "(Optional) If set to true, enables running the Docker daemon inside a Docker container on the CodeBuild instance. Used when building Docker images"
 }
 
+variable "image_pull_credentials_type" {
+  type        = string
+  default     = "CODEBUILD"
+  description = "(Optional) Either CODEBUILD or SERVICE_ROLE"
+}
+
 variable "github_token" {
   type        = string
   default     = ""
